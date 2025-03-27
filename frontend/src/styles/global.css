@@ -1,0 +1,271 @@
+* {
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+}
+  
+
+/* Default light theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+  }
+  
+  /* Dark theme */
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+  }
+  
+  /* Apply colors */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+  }
+  .navbar {
+    background-color: var(--bg-color);
+    padding: 15px;
+    text-align: right;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  
+  
+div {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    /* color: #2d3e50; */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    /* color: #333; */
+    text-align:center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* button{
+    width: 30%;
+    padding: 10px;
+    background-color: #2c2c2c;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #080808;
+} */
+
+.emoji-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px; /* Make emojis bigger */
+    width: 100%; /* Full width */
+    height: 200px; /* Adjust height */
+    border-radius: 10px;
+    color: white; /* Optional: If emoji needs contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px; /* Move to bottom */
+    right: 20px; /* Keep aligned to right */
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Optional: Button hover effect */
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+  
+  
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+p a {
+  color: #0770df;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+
+li {
+    display: inline;
+    margin: 0 15px;
+}
+  
+li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+  
+li a:hover {
+    color: #2472b1;
+}
+
+.mySwiper {
+    width: 80%;
+    margin: auto;
+}
+  
+.carousel-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the entire navigation button clickable */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 60px; /* Increase width */
+  height: 60px; /* Increase height */
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Make arrow icons larger */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px; /* Increase arrow size */
+  color: white; /* White arrow */
+}
+
+/* Increase the area around the arrows */
+.swiper-button-prev {
+  left: -10px; /* Move slightly outward */
+}
+
+.swiper-button-next {
+  right: -10px; /* Move slightly outward */
+}
+
+  
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form elements */
+    width: 100%;
+    margin: 0 auto; /* Centers the form on the page */
+  }
+  
+  label {
+    align-self: flex-start; /* Aligns the label text to the left */
+    margin-bottom: 5px; /* Adds spacing below the label */
+  }
+  
+label {
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom:20px;
+    max-width: 1200px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Hover effect */
+section:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    div {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    button {
+        width: 20%;
+    }
+
+    input[type="text"] {
+        max-width: 20%;
+    }
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+}
