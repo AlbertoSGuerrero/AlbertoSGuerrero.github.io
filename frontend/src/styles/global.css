@@ -1,5 +1,5 @@
 * {
-    font-family: "Roboto", serif;
+    font-family: "Mulish", serif;
     box-sizing: border-box;
 }
   
@@ -24,18 +24,6 @@
     color: var(--text-color);
     transition: background 0.3s, color 0.3s;
   }
-  .navbar {
-    background-color: var(--bg-color);
-    padding: 15px;
-    text-align: right;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  
-  
-div {
-    padding: 10px;
-}
 
 h1 {
     text-align: center;
@@ -74,18 +62,6 @@ button:hover {
     background-color: #080808;
 } */
 
-.emoji-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px; /* Make emojis bigger */
-    width: 100%; /* Full width */
-    height: 200px; /* Adjust height */
-    border-radius: 10px;
-    color: white; /* Optional: If emoji needs contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
 
 .theme-toggle {
     position: fixed;
@@ -114,7 +90,7 @@ p {
 }
 
 p a {
-  color: #0770df;
+  color: #e06d14;
   text-decoration: none;
 }
 
@@ -136,26 +112,24 @@ li a {
 }
   
 li a:hover {
-    color: #2472b1;
+    color: #e06d14;
 }
 
 .mySwiper {
-    width: 80%;
+    width: 90%;
     margin: auto;
+    position: relative !important;
+    overflow: hidden !important;
+    clip-path: inset(0rem 0rem -5rem 0rem); /* Allows bottom 20px to overflow */
+
 }
   
-.carousel-image {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Make the entire navigation button clickable */
 .swiper-button-prev,
 .swiper-button-next {
   width: 60px; /* Increase width */
   height: 60px; /* Increase height */
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   border-radius: 50%; /* Make it circular */
   display: flex;
   align-items: center;
@@ -168,6 +142,7 @@ li a:hover {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 24px; /* Increase arrow size */
+  font-weight: 500;
   color: white; /* White arrow */
 }
 
@@ -179,6 +154,24 @@ li a:hover {
 .swiper-button-next {
   right: -10px; /* Move slightly outward */
 }
+.swiper-pagination {
+  position: absolute;
+  bottom: -20px !important; /* Adjust this value to move the dots lower */
+  left: 50%;
+  transform: translateX(-50%); /* Center pagination dots horizontally */
+  z-index: 10;
+  overflow: visible;
+}
+
+.swiper-pagination-bullet {
+  background-color: color-mix(in srgb, var(--text-color) 80%, transparent) !important; /* Make the dots visible */
+  opacity: 1 !important; /* Ensure they're not transparent */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e06d14 !important; /* Highlight active dot */
+}
+
 
   
 
@@ -245,10 +238,6 @@ section:hover {
 }
 
 @media (max-width: 768px) {
-    div {
-        padding: 10px;
-    }
-
     h1 {
         font-size: 1.5rem;
     }
