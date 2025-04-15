@@ -118,9 +118,8 @@ li a:hover {
 .mySwiper {
     width: 90%;
     margin: auto;
+    padding-bottom: 40px !important;
     position: relative !important;
-    overflow: hidden !important;
-    clip-path: inset(0rem 0rem -5rem 0rem); /* Allows bottom 20px to overflow */
 
 }
   
@@ -130,11 +129,12 @@ li a:hover {
 .swiper-button-next {
   width: 60px; /* Increase width */
   height: 60px; /* Increase height */
-  border-radius: 50%; /* Make it circular */
+  border-radius: 10%; /* Make it circular */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color:rgba(0, 0, 0, 0.5);
   z-index: 10; /* Ensure it's above other elements */
 }
 
@@ -149,18 +149,27 @@ li a:hover {
 /* Increase the area around the arrows */
 .swiper-button-prev {
   left: -10px; /* Move slightly outward */
+  user-select: none;       /* Prevent text/image selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  outline: none; 
 }
 
 .swiper-button-next {
   right: -10px; /* Move slightly outward */
+  user-select: none;       /* Prevent text/image selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  outline: none; 
 }
 .swiper-pagination {
-  position: absolute;
-  bottom: -20px !important; /* Adjust this value to move the dots lower */
+  position: absolute !important;
+  bottom: 10px !important; /* Adjust this value to move the dots lower */
   left: 50%;
-  transform: translateX(-50%); /* Center pagination dots horizontally */
   z-index: 10;
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .swiper-pagination-bullet {

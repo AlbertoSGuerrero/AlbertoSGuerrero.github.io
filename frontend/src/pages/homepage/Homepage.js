@@ -48,7 +48,7 @@ const Homepage = () => {
           {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
         </button>
         </div>
-
+        <div>
         {/* Swiper Carousel */}
         <Swiper
           slidesPerView={4} // Show 3 images at a time
@@ -68,6 +68,7 @@ const Homepage = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
       </div>
       <div>
       <h2>Project Gallery</h2>
