@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from "../../components/Layout";
 import "../../styles/global.css";
 import "./Homepage.css"
@@ -20,22 +20,6 @@ const images = [
 ];
 
 const Homepage = () => {
-
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  // Apply theme on mount
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  // Toggle dark mode
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme); // Save preference
-  };
-
-
   return (
     <Layout>
       <div className="homepage-container">
@@ -44,9 +28,6 @@ const Homepage = () => {
         <h3>Mechanical Engineering at The University of Texas at Austin</h3>
         </div>
         <div>
-        <button className="theme-toggle" onClick={toggleTheme}>
-          {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-        </button>
         </div>
         <div>
         {/* Swiper Carousel */}
