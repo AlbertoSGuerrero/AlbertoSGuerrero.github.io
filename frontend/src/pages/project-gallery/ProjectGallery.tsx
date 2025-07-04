@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { loadMarkdownFile } from '../../utils/LoadMarkdown.ts';
+import { loadMarkdownFile } from '../../utils/LoadMarkdown';
 import Layout from '../../components/Layout.js'
 import './ProjectGallery.css';
 
@@ -17,7 +17,8 @@ export default function ProjectGallery() {
   useEffect(() => {
     async function fetchMarkdownPages() {
       // Fetch the index.json with filenames
-      const res = await fetch('/markdown-pages/index.json');
+      const basePath = process.env.PUBLIC_URL || '';
+      const res = await fetch(`${basePath}/markdown-pages/index.json`);
       const files: string[] = await res.json();
 
       // Load all markdown files in parallel
