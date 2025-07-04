@@ -1,9 +1,34 @@
 import { remark } from 'remark';
 import html from 'remark-html';
 
-export async function loadMarkdownFile(url: string): Promise<string> {
-  const response = await fetch(url);
-  const markdown = await response.text();
-  const result = await remark().use(html).process(markdown);
-  return result.toString(); // returns HTML string
+export interface MarkdownData {
+  title: string;
+  contentHtml: string;
+}
+
+export async function loadMarkdownFile(url: string): Promise<MarkdownData> {
+  const res = await fetch(url);
+  const markdown = await res.text();
+
+  let title = 'Untitled';
+  let body = markdown;
+
+  const match = markdown.match(/^---\s*([\s\S]*?)---\s*/);
+
+  if (match) {
+    const frontmatter = match[1].trim();
+    body = markdown.slice(match[0].length);
+
+    const titleMatch = frontmatter.match(/^title:\s*(["']?)(.*?)\1$/m);
+    if (titleMatch) {
+      title = titleMatch[2].trim();
+    }
+  }
+
+  const processed = await remark().use(html).process(body);
+
+  return {
+    title,
+    contentHtml: processed.toString(),
+  };
 }

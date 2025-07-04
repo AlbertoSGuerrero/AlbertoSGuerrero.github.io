@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './pages/homepage/Homepage';
 import About from './pages/about/About'
-import ProjectGallery from './pages/ProjectGallery.tsx';
+import ProjectGallery from './pages/project-gallery/ProjectGallery.tsx';
 
 
 const App = () => {

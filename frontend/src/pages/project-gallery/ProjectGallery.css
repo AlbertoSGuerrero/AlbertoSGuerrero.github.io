@@ -1,0 +1,40 @@
+/* ProjectGallery.css */
+
+.project-gallery-container {
+    padding: 1rem;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid #e5e7eb; /* light gray */
+    margin-bottom: 1rem;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #374151; /* gray-700 */
+    transition: border-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    border-bottom-color: #3b82f6; /* blue-500 */
+  }
+  
+  .tab-button.active {
+    border-bottom-color: #3b82f6; /* blue-500 */
+    font-weight: 700;
+    color: #1e40af; /* blue-800 */
+  }
+  
+  .markdown-content {
+    max-width: 100%;
+    /* Use your preferred typography or utility styles here */
+  }
+  
