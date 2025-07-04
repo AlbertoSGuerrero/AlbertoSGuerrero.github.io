@@ -4,7 +4,7 @@
 }
   
 
-/* Default light theme EDIT HERE*/
+/* Default light theme */
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
@@ -44,7 +44,15 @@ ul {
     padding: 0;
 }
 
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.layout-wrapper main {
+  flex: 1;
+}
 /* button{
     width: 30%;
     padding: 10px;
