@@ -13,4 +13,6 @@ This is the **first** project in the gallery.
 - Loads markdown dynamically
 - Has tab navigation
 
+![My image](markdown-pages/images/image1.jpg)
+
 Enjoy exploring this project!
