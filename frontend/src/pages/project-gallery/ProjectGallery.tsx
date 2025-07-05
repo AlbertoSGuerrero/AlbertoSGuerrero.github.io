@@ -24,7 +24,7 @@ export default function ProjectGallery() {
       // Load all markdown files in parallel
       const loadedPages = await Promise.all(
         files.map(async (filename) => {
-          const slug = filename.replace(/\.md$/, '');
+          const slug = filename.replace(/\.txt$/, '');
           const { title, contentHtml } = await loadMarkdownFile(`${basePath}/markdown-pages/${filename}`);
           console.log((`${basePath}/markdown-pages/${filename}`))
           console.log(`Loaded page: ${slug} - ${title}`);
