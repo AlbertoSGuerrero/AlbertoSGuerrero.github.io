@@ -21,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -f",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,7 +45,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://AlbertoSGuerrero.github.io",
+"homepage": "https://AlbertoSGuerrero.github.io",
+
   "devDependencies": {
     "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",

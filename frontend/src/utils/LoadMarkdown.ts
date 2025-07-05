@@ -7,7 +7,8 @@ export interface MarkdownData {
 }
 
 export async function loadMarkdownFile(url: string): Promise<MarkdownData> {
-  const res = await fetch(url);
+  const basePath = process.env.PUBLIC_URL || '';
+  const res = await fetch(basePath + url);
   const markdown = await res.text();
 
   let title = 'Untitled';

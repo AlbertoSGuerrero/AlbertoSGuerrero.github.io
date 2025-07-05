@@ -25,7 +25,9 @@ export default function ProjectGallery() {
       const loadedPages = await Promise.all(
         files.map(async (filename) => {
           const slug = filename.replace(/\.md$/, '');
-          const { title, contentHtml } = await loadMarkdownFile(`/markdown-pages/${filename}`);
+          const { title, contentHtml } = await loadMarkdownFile(`${basePath}/markdown-pages/${filename}`);
+          console.log((`${basePath}/markdown-pages/${filename}`))
+          console.log(`Loaded page: ${slug} - ${title}`);
           return { slug, title, contentHtml };
         })
       );
